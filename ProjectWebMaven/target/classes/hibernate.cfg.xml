@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+	<hibernate-configuration>
+	<session-factory>
+	
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/myhiber</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">Macbook#567</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_details">true</property>
+		<property name="format_sql">true</property>
+		
+		<mapping class="com.annotations.Student"/>
+		<mapping class="com.annotations.Address"/>
+		
+		<mapping class="com.mapping.oneToOne.Question"/>
+		<mapping class="com.mapping.oneToOne.Answer"/>
+		
+		<mapping class="com.mapping.oneToMany.Question1"/>
+		<mapping class="com.mapping.oneToMany.Answer1"/>
+		
+		<mapping class="com.mapping.ManyToMany.Emp"/>
+		<mapping class="com.mapping.ManyToMany.Project"/>
+		
+		<mapping class="com.mapping.lazy_eager.Question2"/>
+		<mapping class="com.mapping.lazy_eager.Answer2"/>
+		
+		<mapping class="com.objectsStates.Studentt"/>
+		<mapping class="com.objectsStates.Certificatee"/>
+		
+		
+	</session-factory>
+	</hibernate-configuration>
